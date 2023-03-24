@@ -15,3 +15,38 @@
     font-family: ubuntu;
     gap: 10px;
 }
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logout-btn {
+    width: 6em;
+    height: 3em;
+    background-color: #FF550F;
+    color: white;
+    border: none;
+    font-size: 12px;
+    font-family: ubuntu;
+    font-weight: 300;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px){
+    .logout-btn {
+        width: 7em;
+    height: 2.5em;
+    font-size: 15px;
+    font-weight: 400;
+    transition: width 0.5s, height 0.5s;
+    }
+
+    .user {
+        gap: 20px;
+    }
+}

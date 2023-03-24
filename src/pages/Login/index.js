@@ -7,7 +7,6 @@ import "./login.css";
 import { getUserDetail, getUserToken } from "../../Helper/Auth";
 
 function Login() {
-  console.log("login");
   const dispatch = useDispatch();
 
   const initialValues = { email: "", password: "" };

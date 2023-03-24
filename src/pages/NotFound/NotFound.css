@@ -1,0 +1,13 @@
+.nt-found-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nt-found-text {
+    font-size: 50px;
+    font-family: 'Roboto';
+    margin: 0 auto;
+}

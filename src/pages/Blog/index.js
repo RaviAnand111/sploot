@@ -8,14 +8,7 @@ import "./Blog.css";
 
 function Blog() {
   const [blog, setBlog] = useState([]);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  function handleLogOut() {
-    localStorage.removeItem("userToken");
-    dispatch(removeProfile());
-    navigate("/login");
-  }
+  console.log(blog, "bg");
   return (
     <div className="blog-container">
       <CategoryCarousel setBlog={setBlog} />
@@ -27,6 +20,7 @@ function Blog() {
               imgSrc={blogData?.imageUrl}
               title={blogData?.title}
               description={blogData?.description}
+              redirectUrl={blogData?.redirectUrl}
             />
           ))
         ) : (

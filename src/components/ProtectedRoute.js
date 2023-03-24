@@ -5,7 +5,8 @@ import { getUserToken } from "../Helper/Auth";
 
 function ProtectedRoute({ children }) {
   const token = getUserToken();
-  return <>{token ? children : <Navigate to="/login" replace={true} />}</>;
+  // return <>{token ? children : <Navigate to="/login" replace={true} />}</>;
+  return <div>{token ? children : <div>nah</div>}</div>;
 }
 
 export default ProtectedRoute;

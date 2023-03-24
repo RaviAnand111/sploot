@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { ProfileIcon } from "../asset";
+import { removeProfile } from "../features/profile/profileSlice";
 import { getUserDetail } from "../Helper/Auth";
 import "./Navbar.css";
 
 function Navbar() {
   const [userData, setUserData] = useState({});
+  const dispatch = useDispatch();
+  // const navigate = useNavigate();
+
   const data = useSelector((state) => state?.userProfile?.profile?.data);
   useEffect(() => {
     const getData = async () => {
@@ -18,6 +23,12 @@ function Navbar() {
     }
   }, []);
 
+  function handleLogOut() {
+    localStorage.removeItem("userToken");
+    dispatch(removeProfile());
+    window.location.href = "/login";
+  }
+
   return (
     <div className="navbar-container">
       <a href="/">
@@ -25,9 +36,19 @@ function Navbar() {
       </a>
 
       {userData && (
-        <div className="user-profile">
-          <img src={userData?.photoUrl} alt="logo" width="30px" height="30px" />
-          <p>{userData?.name}</p>
+        <div className="user">
+          <button onClick={handleLogOut} className="logout-btn">
+            Log Out
+          </button>
+          <div className="user-profile">
+            <img
+              src={userData?.photoUrl}
+              alt="logo"
+              width="30px"
+              height="30px"
+            />
+            <p>{userData?.name}</p>
+          </div>
         </div>
       )}
     </div>

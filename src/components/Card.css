@@ -1,17 +1,14 @@
 .card-container{
-    /* width: 338px;
-    height: 500px; */
     width: 100%;
     margin: 3em auto;
     justify-content: center;
     align-items: center;
     align-content: center;
     transition: width 0.5s, height 0.5s;
+    cursor: pointer;
 }
 
 .card-img{
-    /* width: 21em;
-    height: 22em; */
     width: 100%;
     border-radius: 20px;
     transition: width 0.5s, height 0.5s;
