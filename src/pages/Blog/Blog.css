@@ -1,0 +1,41 @@
+.blog-container {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.empty-blog {
+    margin: 5em auto;
+}
+
+.woof-header {
+    font-size: 30px;
+}
+
+.nt-found-text {
+    font-family: ubuntu;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 890px){
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1250px){
+    .blogs {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+}

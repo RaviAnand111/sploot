@@ -1,0 +1,100 @@
+.login-container {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFD9C4;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+}
+
+.textcontainer{
+    line-height: 0.5;
+    margin: 0 auto;
+    margin-top: 2em;
+}
+
+.heading {
+    font-size: 25px;
+    text-align: left;
+}
+
+.subheading {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1em;
+    font-family: ubuntu;
+    background-color: white;
+    height: 17em;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 6px;
+    width: 14em;
+    transition: width 0.4s linear;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px){
+    .login {
+        width: 25em;
+        transition: width 0.4s linear;
+        font-weight: bold;
+    }
+
+    .textcontainer {
+        margin-bottom: 1.5em;
+    }
+}
+
+.form {
+    margin-top: 1em;
+}
+
+.input {
+    width: 100%;
+    height: 3.4em;
+    margin: 0.8em 0;
+    padding: 0 0 0 1em;
+    box-sizing: border-box;
+    border: 1.5px solid #dcdcdc;
+    border-radius: 5px;
+    outline-style: none;
+}
+
+.loginbtn {
+    width: 100%;
+    height: 3.1em;
+    font-size: 0.8em;
+    border: 1.5px solid #dcdcdc;
+    background-color: #ebe9e9;
+    border-radius: 20px;
+    color: #5b5959;
+    margin-top: 20px;
+}
+
+.error {
+    margin: 1px;
+    font-size: 0.5em;
+    color: red;
+    text-align: left;
+}
+
+.password-input{
+    position: relative;
+}
+
+.eye-icon {
+    width: 1.1em;
+    height: 1.1em;
+    position: absolute;
+    top: 1.1em;
+    right: 1.6em;
+}
+

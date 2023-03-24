@@ -1,0 +1,17 @@
+.navbar-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+    align-items: center;
+    box-shadow: 0 0 10px 0 rgb(138, 134, 134);
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: ubuntu;
+    gap: 10px;
+}
